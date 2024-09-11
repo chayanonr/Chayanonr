@@ -1,0 +1,34 @@
+# .NET Core
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.dbmdl
+*.bak
+*.log
+
+# ASP.NET
+wwwroot/
+appsettings*.json
+*.user
+*.suo
+*.vscode/
+
+# Rider
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Others
+*.ncb
+*.suo
+*.user
+*.suo
+*.cache
+*.dbmdl
+*.bak
+*.log
+*.tmp

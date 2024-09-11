@@ -1,0 +1,16 @@
+@page
+@model ProjectsModel
+
+<section id="projects">
+    <h1>My Projects</h1>
+    <div class="project-buttons">
+        <button onclick="showProjects(1, this)">Set 1</button>
+        <button onclick="showProjects(2, this)">Set 2</button>
+        <button onclick="showProjects(3, this)">Set 3</button>
+    </div>
+
+    <div class="projects-container" id="projects-container">
+        <!-- Project items will be dynamically inserted here by JavaScript -->
+    </div>
+
+</section>
