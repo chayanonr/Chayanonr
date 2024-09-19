@@ -1,16 +1,96 @@
 @page
 @model ProjectsModel
+@{
+    ViewData["Title"] = "Projects";
+}
 
-<section id="projects">
-    <h1>My Projects</h1>
-    <div class="project-buttons">
-        <button onclick="showProjects(1, this)">Set 1</button>
-        <button onclick="showProjects(2, this)">Set 2</button>
-        <button onclick="showProjects(3, this)">Set 3</button>
-    </div>
+<body class="project-page">
+    <section id="projects">
+        <h1>Projects</h1>
 
-    <div class="projects-container" id="projects-container">
-        <!-- Project items will be dynamically inserted here by JavaScript -->
-    </div>
+        <!-- Sorting Buttons -->
+        <div class="project-buttons">
+            <button onclick="filterProjects('all', this)" class="active">All</button>
+            <button onclick="filterProjects('frontend', this)">Frontend</button>
+            <button onclick="filterProjects('backend', this)">Backend</button>
+            <button onclick="filterProjects('fullstack', this)">Full Stack</button>
+        </div>
 
-</section>
+        <div class="projects-container">
+            <div class="project-item" data-category="frontend" onclick="openProject(1)">
+                <div class="project-image">
+                    <img src="/img/project1.jpg" alt="Project 1">
+                </div>
+                <div class="project-details">
+                    <h2>Project 1</h2>
+                    <p>Brief description of Project 1</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="backend" onclick="openProject(2)">
+                <div class="project-image">
+                    <img src="/img/P1-1.png" alt="Project 2">
+                </div>
+                <div class="project-details">
+                    <h2>Project 2</h2>
+                    <p>Brief description of Project 2</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="fullstack" onclick="openProject(3)">
+                <div class="project-image">
+                    <img src="/img/P1-2.png" alt="Project 3">
+                </div>
+                <div class="project-details">
+                    <h2>Project 3</h2>
+                    <p>Brief description of Project 3</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="fullstack" onclick="openProject(4)">
+                <div class="project-image">
+                    <img src="/img/P1-3.png" alt="Project 4">
+                </div>
+                <div class="project-details">
+                    <h2>Project 4</h2>
+                    <p>Brief description of Project 4</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="frontend" onclick="openProject(5)">
+                <div class="project-image">
+                    <img src="/img/P2-1.png" alt="Project 5">
+                </div>
+                <div class="project-details">
+                    <h2>Project 5</h2>
+                    <p>Brief description of Project 5</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="backend" onclick="openProject(6)">
+                <div class="project-image">
+                    <img src="/img/P2-2.png" alt="Project 6">
+                </div>
+                <div class="project-details">
+                    <h2>Project 6</h2>
+                    <p>Brief description of Project 6</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="fullstack" onclick="openProject(7)">
+                <div class="project-image">
+                    <img src="/img/P-3.png" alt="Project 7">
+                </div>
+                <div class="project-details">
+                    <h2>Project 7</h2>
+                    <p>Brief description of Project 7</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Blur Overlay -->
+        <div id="blur-overlay"></div>
+
+        <!-- Hidden Sliding Window -->
+        <div id="project-slide-window" class="project-slide-window">
+            <div class="project-slide-content">
+                <span class="close-btn" onclick="closeProject()">&times;</span>
+                <div id="project-details"></div>
+            </div>
+        </div>
+    </section>
+</body>
