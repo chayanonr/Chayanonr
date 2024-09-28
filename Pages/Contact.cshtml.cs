@@ -23,9 +23,16 @@ namespace chayanonr.Pages
                 return Page();
             }
 
+            // Check if Name or Email is null or empty
+            if (string.IsNullOrWhiteSpace(Name) || string.IsNullOrWhiteSpace(Email))
+            {
+                ModelState.AddModelError(string.Empty, "Name and Email are required.");
+                return Page();
+            }
+
             var emailMessage = new MimeMessage();
-            emailMessage.From.Add(new MailboxAddress("Chayanon", "chayanon.career@gmail.com")); // Your email
-            emailMessage.To.Add(new MailboxAddress(Name, "chayanon.career@gmail.com")); // Recipient email (your email)
+            emailMessage.From.Add(new MailboxAddress("Chayanon", "chayanon.career@gmail.com"));
+            emailMessage.To.Add(new MailboxAddress(Name, Email)); // Use the Email from the form
             emailMessage.Subject = "New Contact Form Submission";
             emailMessage.Body = new TextPart("plain")
             {
@@ -34,10 +41,10 @@ namespace chayanonr.Pages
 
             using (var client = new SmtpClient())
             {
-                client.ServerCertificateValidationCallback = (s, c, h, e) => true; // Bypass SSL validation (for testing only)
-                
+                client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+
                 client.Connect("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
-                client.Authenticate("chayanon.career@gmail.com", "leyx vqnu zqyh zuzs"); // Replace with your actual app password
+                client.Authenticate("chayanon.career@gmail.com", "leyx vqnu zqyh zuzs"); // Use your app password
 
                 client.Send(emailMessage);
                 client.Disconnect(true);
