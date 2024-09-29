@@ -53,4 +53,4 @@ jobs:
           app-name: 'chayanonr'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E78B5C71E93342F0A0B2BA2733D95171 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_76FA79AD36364704BF09F6AC7B20E07D }}
