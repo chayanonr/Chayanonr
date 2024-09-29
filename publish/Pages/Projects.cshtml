@@ -1,0 +1,98 @@
+@page
+@model ProjectsModel
+@{
+    ViewData["Title"] = "Projects | Chayanonr";
+}
+
+<body class="project-page">
+    <section id="projects">
+        <h1>Projects</h1>
+
+        <!-- Sorting Buttons -->
+        <div class="project-buttons">
+            <button onclick="filterProjects('all', this)" class="active">All</button>
+            <button onclick="filterProjects('frontend', this)">Frontend</button>
+            <button onclick="filterProjects('backend', this)">Backend</button>
+            <button onclick="filterProjects('fullstack', this)">Full Stack</button>
+        </div>
+
+        <div class="projects-container">
+            <div class="project-item" data-category="frontend" onclick="openProject(1)">
+                <div class="project-image">
+                    <img src="/img/project1.jpg" alt="Project 1">
+                </div>
+                <div class="project-details">
+                    <h2>My Personal Website</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="project-item" data-category="backend" onclick="openProject(2)">
+                <div class="project-image">
+                    <img src="/img/P1-1.png" alt="Project 2">
+                </div>
+                <div class="project-details">
+                    <h2>Back test script</h2>
+                    <p>Back Test Script with ema</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="fullstack" onclick="openProject(3)">
+                <div class="project-image">
+                    <img src="/img/P1-2.png" alt="Project 3">
+                </div>
+                <div class="project-details">
+                    <h2>Trading Bot</h2>
+                    <p>Trading bot with ema</p>
+                </div>
+            </div>
+            <!--<div class="project-item" data-category="fullstack" onclick="openProject(4)">
+                <div class="project-image">
+                    <img src="/img/P1-3.png" alt="Project 4">
+                </div>
+                <div class="project-details">
+                    <h2>Project 4</h2>
+                    <p>Brief description of Project 4</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="frontend" onclick="openProject(5)">
+                <div class="project-image">
+                    <img src="/img/P2-1.png" alt="Project 5">
+                </div>
+                <div class="project-details">
+                    <h2>Project 5</h2>
+                    <p>Brief description of Project 5</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="backend" onclick="openProject(6)">
+                <div class="project-image">
+                    <img src="/img/P2-2.png" alt="Project 6">
+                </div>
+                <div class="project-details">
+                    <h2>Project 6</h2>
+                    <p>Brief description of Project 6</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="fullstack" onclick="openProject(7)">
+                <div class="project-image">
+                    <img src="/img/P-3.png" alt="Project 7">
+                </div>
+                <div class="project-details">
+                    <h2>Project 7</h2>
+                    <p>Brief description of Project 7</p>
+                </div>
+            </div> -->
+        </div>
+
+        
+
+        <!-- Background Blur Overlay -->
+        <div id="blur-overlay"></div>
+
+        <!-- Hidden Sliding Window -->
+        <div id="project-slide-window" class="project-slide-window">
+            <div class="project-slide-content">
+                <span class="close-btn" onclick="closeProject()">&times;</span>
+                <div id="project-details"></div>
+            </div>
+        </div>
+    </section>
+</body>
