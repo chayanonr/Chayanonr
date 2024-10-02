@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace chayanonr.Pages
 {
-    public class BlogsModel : PageModel
+    public class ResumeModel : PageModel
     {
         public void OnGet()
         {
