@@ -70,87 +70,73 @@ function openProject(projectId) {
 
   // Add unique content dynamically based on projectId
   let content = '';
-  switch (projectId) {
-    case 1:
-      content = `
-                <div style="padding: 20px; color: #333;">
-                    <h2 style="color: white;font-weight: 800;margin-top: 1.5rem;">My Personal Website</h2>
-                    <img src="/img/project1.jpg" alt="Project 1" style="width:100%; max-width: 500px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); object-fit:cover;">
-                    
-                    <h3 style = "color : white; font-size: 1.124em ;margin-top: 2rem;margin-bottom: 0.8rem;">About</h3>
-                   
-                    <p style="color: white; margin: 10px 0;">My personal website that showcase all of my project using .net framework.</p>
-                   
-                    <h4 style = "color : white; font-size = 1em;margin-top: 2rem;margin-bottom: 0.8rem;"> Technologies<h4>
-                    <p2 style = "display:flex">
-                    <span style = "background : red; color : white; padding : 6px 13px; border-radius:4px;text-transform:capitalize;font-size:11px;margin-right:6px;font-weight:700;">ASP.Net</span>
-                    <span style = "background : red; color : white; padding : 6px 13px; border-radius:4px;text-transform:capitalize;font-size:11px;margin-right:6px;font-weight:700;">CSS</span>
-                    <span style = "background : red; color : white; padding : 6px 13px; border-radius:4px;text-transform:capitalize;font-size:11px;margin-right:6px;font-weight:700;">JS</span>
-                    <span style = "background : red; color : white; padding : 6px 13px; border-radius:4px;text-transform:capitalize;font-size:11px;margin-right:6px;font-weight:700;">Razor Page</span>
-                    </p2>
-                    
-                    <h5 style = "color : white; font-size: 1.124em ;margin-top: 2rem;margin-bottom: 0.8rem;">Website</h5>
-                    <p>
-                    <a href="https://www.example.com/project1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: bold;">Learn More</a>
-                    </p>
-                </div>
-          `;
-      break;
-    case 2:
-      content = `
-             <div style="padding: 20px; color: #333;">
-                    <h2 style="color: white;font-weight: 800;margin-top: 1.5rem;">My Personal Website</h2>
-                    <img src="/img/P2-1.png" alt="Project 2" style="width:100%; max-width: 500px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); object-fit:cover;">
-                    
-                    <h3 style = "color : white; font-size: 1.124em ;margin-top: 2rem;margin-bottom: 0.8rem;">About</h3>
-                   
-                    <p style="color: white; margin: 10px 0;">My personal website that showcase all of my project using .net framework.</p>
-                   
-                    <h4 style = "color : white; font-size = 1em;margin-top: 2rem;margin-bottom: 0.8rem;"> Technologies<h4>
-                    <p2 style = "display:flex">
-                    <span style = "background : red; color : white; padding : 6px 13px; border-radius:4px;text-transform:capitalize;font-size:11px;margin-right:6px;font-weight:700;">.Net</span>
-                    <span style = "background : red; color : white; padding : 6px 13px; border-radius:4px;text-transform:capitalize;font-size:11px;margin-right:6px;font-weight:700;">CSS</span>
-                    <span style = "background : red; color : white; padding : 6px 13px; border-radius:4px;text-transform:capitalize;font-size:11px;margin-right:6px;font-weight:700;">JS</span>
+switch (projectId) {
+  case 1:
+    content = `
+      <div class="project-container">
+        <h2 class="project-title">My Personal Website</h2>
+        <img src="/img/project1.jpg" alt="Project 1" class="project-image">
+        <h3 class="project-subtitle">About</h3>
+        <p class="project-description">My personal website that showcases all of my projects using .net framework.</p>
+        <h4 class="project-technologies-title">Technologies</h4>
+        <p2 class="project-technologies">
+          <span class="tech-badge">ASP.Net</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JS</span>
+          <span class="tech-badge">Razor Page</span>
+        </p2>
+        <h5 class="project-website-title">Website</h5>
+        <p>
+          <a href="https://www.example.com/project1" target="_blank" class="project-link">Learn More</a>
+        </p>
+      </div>
+    `;
+    break;
+  case 2:
+    content = `
+      <div class="project-container">
+        <h2 class="project-title">My Personal Website</h2>
+        <img src="/img/P2-1.png" alt="Project 2" class="project-image">
+        <h3 class="project-subtitle">About</h3>
+        <p class="project-description">My personal website that showcases all of my projects using .net framework.</p>
+        <h4 class="project-technologies-title">Technologies</h4>
+        <p2 class="project-technologies">
+          <span class="tech-badge">.Net</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JS</span>
+        </p2>
+        <h5 class="project-website-title">Website</h5>
+        <p>
+          <a href="https://www.example.com/project1" target="_blank" class="project-link">Learn More</a>
+        </p>
+      </div>
+    `;
+    break;
+  case 3:
+    content = `
+      <div class="project-container">
+        <h2 class="project-title">My Personal Website</h2>
+        <img src="/img/P3-1.png" alt="Project 3" class="project-image">
+        <h3 class="project-subtitle">About</h3>
+        <p class="project-description">My personal website that showcases all of my projects using .net framework.</p>
+        <h4 class="project-technologies-title">Technologies</h4>
+        <p2 class="project-technologies">
+          <span class="tech-badge">.Net</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JS</span>
+        </p2>
+        <h5 class="project-website-title">Website</h5>
+        <p>
+          <a href="https://www.example.com/project1" target="_blank" class="project-link">Learn More</a>
+        </p>
+      </div>
+    `;
+    break;
+  default:
+    content = `<h2>Project not found</h2>`;
+    break;
+}
 
-                    </p2>
-                    
-                    <h5 style = "color : white; font-size: 1.124em ;margin-top: 2rem;margin-bottom: 0.8rem;">Website</h5>
-                    <p>
-                    <a href="https://www.example.com/project1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: bold;">Learn More</a>
-                    </p>
-                </div>
-          `;
-      break;
-    case 3:
-      content = `
-              <div style="padding: 20px; color: #333;">
-                    <h2 style="color: white;font-weight: 800;margin-top: 1.5rem;">My Personal Website</h2>
-                    <img src="/img/P3-1.png" alt="Project 3" style="width:100%; max-width: 500px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); object-fit:cover;">
-                    
-                    <h3 style = "color : white; font-size: 1.124em ;margin-top: 2rem;margin-bottom: 0.8rem;">About</h3>
-                   
-                    <p style="color: white; margin: 10px 0;">My personal website that showcase all of my project using .net framework.</p>
-                   
-                    <h4 style = "color : white; font-size = 1em;margin-top: 2rem;margin-bottom: 0.8rem;"> Technologies<h4>
-                    <p2 style = "display:flex">
-                    <span style = "background : red; color : white; padding : 6px 13px; border-radius:4px;text-transform:capitalize;font-size:11px;margin-right:6px;font-weight:700;">.Net</span>
-                    <span style = "background : red; color : white; padding : 6px 13px; border-radius:4px;text-transform:capitalize;font-size:11px;margin-right:6px;font-weight:700;">CSS</span>
-                    <span style = "background : red; color : white; padding : 6px 13px; border-radius:4px;text-transform:capitalize;font-size:11px;margin-right:6px;font-weight:700;">JS</span>
-                     
-                    </p2>
-                    
-                    <h5 style = "color : white; font-size: 1.124em ;margin-top: 2rem;margin-bottom: 0.8rem;">Website</h5>
-                    <p>
-                    <a href="https://www.example.com/project1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: bold;">Learn More</a>
-                    </p>
-                </div>
-          `;
-      break;
-    // Add more cases for other projects as needed
-    default:
-      content = `<h2>Project not found</h2>`;
-      break;
-  }
 
   // Inject the content into the slide window
   projectDetails.innerHTML = content;
