@@ -18,6 +18,14 @@
   --circleline-color: white;
 }
 
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.active {
+  opacity: 1;
+}
 /* Header styles */
 header {
   background-color: var(--nav-background);
@@ -597,7 +605,7 @@ section#about {
 
 
 .project-page {
-  height: 220vh;
+  height: 160vh;
   background-color: var(--background-color);
   margin: 0;
   position: absolute;
@@ -611,7 +619,7 @@ section#about {
   margin-top: 10%;
   /* Maintain original margin */
   color: #b6b6d5;
-  height: 200vh;
+  height: 160vh;
   /* Allow flexible height based on content */
   background-color: var(--background-color);
 
@@ -951,7 +959,7 @@ section#about {
 
 /*Resume*/
 .resume-page {
-  height: 120vh;
+  height: 150vh;
   position: absolute;
   background-color: var(--background-color);
   margin: 0;
@@ -1772,4 +1780,201 @@ p {
   }
 
 
+}
+
+@media (max-width:391px){
+  .about-page{
+    height: 190vh;
+  }
+}
+
+@media (max-width:431px){
+  
+
+  .menu-icon {
+    transform: translateX(-350%);
+  }
+
+  #theme-toggle {
+    transform: translateX(-200%);
+  }
+
+  .index-page {
+
+
+    .hero-content {
+      top: 15vh;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .hero-content p {
+      font-size: 1rem;
+    }
+  }
+
+  /*about*/
+  section#about{
+    height: 160vh;
+  }
+  .about-page{
+    height:160vh;
+  }
+
+  .content {
+    transform: none;
+  }
+
+  .about-content {
+    height: fit-content;
+    padding-top: 10vh;
+    margin-left: 0;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .roadmap h3 {
+    font-size: 1.1rem;
+  }
+
+  .roadmap p,
+  .roadmap p2 {
+    font-size: 0.9rem;
+  }
+
+  .see-proj {
+    font-size: 1.5rem;
+  }
+
+  /*Projects*/
+
+  .project-page {
+    height: 100vh;
+  }
+
+  #projects {
+    padding: 40px 20px;
+    margin-top: 10%;
+    color: #b6b6d5;
+    height: 160vh;
+    background-color: var(--background-color);
+  }
+
+  #projects h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-buttons {
+    gap: 0;
+    font-size: 1rem;
+  }
+
+  .project-buttons button {
+    padding: 6px 12px;
+  }
+
+  .project-buttons button.active {
+    transform: scale(1);
+  }
+
+  .projects-container {
+    margin-left: 0;
+    width: 100%;
+
+  }
+
+  .project-slide-content {
+    transform: translateX(-50%);
+    width: fit-content;
+    color: var(--text-color);
+  }
+
+  /*Resume*/
+  .resume-page{
+    height: 130vh;
+  }
+  .resume-content {
+    margin-top: 15vh;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .resume-img {
+    height: -webkit-fill-available;
+    width: auto;
+    margin-left: 0;
+    border: none;
+
+  }
+
+  .resume-img img {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+  }
+
+  .c-contact {
+    margin-top: 2.5vh;
+  }
+
+  .see-contact {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 10%;
+    font-size: 1.1rem;
+  }
+
+  /*Contact*/
+  #contact h2 {
+    font-size: 1.5rem;
+    margin-left: 10%;
+  }
+
+  #contact p {
+    margin-left: 10%;
+  }
+
+  .form-group label {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 10%;
+  }
+
+  #contact form button {
+    width: fit-content;
+    padding: 15px;
+    margin-left: 5%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .backtohome {
+    margin-top: -10%;
+    margin-left: 50%;
+  }
+
+  .see-home {
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+  }
 }

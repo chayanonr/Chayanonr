@@ -4,7 +4,7 @@
     ViewData["Title"] = "Projects | Chayanonr";
 }
 
-<body class="project-page">
+<body class="project-page" id="project-page">
     <section id="projects">
         <h1>Projects</h1>
 
@@ -12,8 +12,8 @@
         <div class="project-buttons">
             <button onclick="filterProjects('all', this)" class="active">All</button>
             <button onclick="filterProjects('frontend', this)">Frontend</button>
-            <button onclick="filterProjects('backend', this)">Backend</button>
-            <button onclick="filterProjects('fullstack', this)">Full Stack</button>
+            <button onclick="filterProjects('investment', this)">Investment</button>
+            <!--<button onclick="filterProjects('fullstack', this)">Full Stack</button>-->
         </div>
 
         <div class="projects-container">
@@ -26,18 +26,18 @@
                     <p></p>
                 </div>
             </div>
-            <div class="project-item" data-category="backend" onclick="openProject(2)">
+            <div class="project-item" data-category="investment" onclick="openProject(2)">
                 <div class="project-image">
-                    <img src="/img/P1-1.png" alt="Project 2">
+                    <img src="/img/project_spot.jpg" alt="Project 2">
                 </div>
                 <div class="project-details">
                     <h2>Back test script</h2>
                     <p>Back Test Script with ema</p>
                 </div>
             </div>
-            <div class="project-item" data-category="fullstack" onclick="openProject(3)">
+            <div class="project-item" data-category="investment" onclick="openProject(3)">
                 <div class="project-image">
-                    <img src="/img/P1-2.png" alt="Project 3">
+                    <img src="/img/project_future.jpg" alt="Project 3">
                 </div>
                 <div class="project-details">
                     <h2>Trading Bot</h2>

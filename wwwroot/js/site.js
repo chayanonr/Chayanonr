@@ -1,4 +1,27 @@
-﻿document.addEventListener('DOMContentLoaded', function () {
+﻿window.onload = function() {
+  // Get the body element by its unique id
+  const bodyElement = document.getElementById(document.body.id);
+
+  // If the body element exists, apply the active class to fade in
+  if (bodyElement) {
+      bodyElement.classList.add('active');
+  }
+};
+
+window.onbeforeunload = function() {
+  // Get the body element by its unique id
+  const bodyElement = document.getElementById(document.body.id);
+
+  // If the body element exists, remove the active class to fade out
+  if (bodyElement) {
+      bodyElement.classList.remove('active');
+  }
+};
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
@@ -87,7 +110,7 @@ switch (projectId) {
         </p2>
         <h5 class="project-website-title">Website</h5>
         <p>
-          <a href="https://www.example.com/project1" target="_blank" class="project-link">Learn More</a>
+          <a href="https://chayanonr.azurewebsites.net/" target="_blank" class="project-link">Learn More</a>
         </p>
       </div>
     `;
@@ -95,19 +118,19 @@ switch (projectId) {
   case 2:
     content = `
       <div class="project-container">
-        <h2 class="project-title">My Personal Website</h2>
-        <img src="/img/P2-1.png" alt="Project 2" class="project-image">
+        <h2 class="project-title">My Back Test Tools</h2>
+        <img src="/img/project_spot.jpg" alt="Project 2" class="project-image">
         <h3 class="project-subtitle">About</h3>
-        <p class="project-description">My personal website that showcases all of my projects using .net framework.</p>
+        <p class="project-description">I implement back test script by using EMA 12 26 to help test the result.</p>
         <h4 class="project-technologies-title">Technologies</h4>
         <p2 class="project-technologies">
-          <span class="tech-badge">.Net</span>
-          <span class="tech-badge">CSS</span>
-          <span class="tech-badge">JS</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Investment</span>
+           <span class="tech-badge">Binance API</span>
         </p2>
         <h5 class="project-website-title">Website</h5>
         <p>
-          <a href="https://www.example.com/project1" target="_blank" class="project-link">Learn More</a>
+          <a href="https://github.com/chayanonr/backtest" target="_blank" class="project-link">Learn More</a>
         </p>
       </div>
     `;
@@ -115,19 +138,19 @@ switch (projectId) {
   case 3:
     content = `
       <div class="project-container">
-        <h2 class="project-title">My Personal Website</h2>
-        <img src="/img/P3-1.png" alt="Project 3" class="project-image">
+        <h2 class="project-title">My Trading Bot</h2>
+        <img src="/img/project_future.jpg" alt="Project 3" class="project-image">
         <h3 class="project-subtitle">About</h3>
-        <p class="project-description">My personal website that showcases all of my projects using .net framework.</p>
+        <p class="project-description">My project is focus on using script to operate in spot market in binance exchange. Focus on cross over of EMA 12 26 value.</p>
         <h4 class="project-technologies-title">Technologies</h4>
         <p2 class="project-technologies">
-          <span class="tech-badge">.Net</span>
-          <span class="tech-badge">CSS</span>
-          <span class="tech-badge">JS</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Binanace API</span>
+          <span class="tech-badge">Investment</span>
         </p2>
         <h5 class="project-website-title">Website</h5>
         <p>
-          <a href="https://www.example.com/project1" target="_blank" class="project-link">Learn More</a>
+          <a href="https://github.com/chayanonr/EMA_Trading_BOT" target="_blank" class="project-link">Learn More</a>
         </p>
       </div>
     `;
