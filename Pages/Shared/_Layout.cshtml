@@ -16,7 +16,6 @@
         <img src="/img/ChayanonR.png" alt="Chayanonr Logo" class="logo-img">
       </a>
       <div class="nav-container">
-
         <button class="menu-toggle" onclick="toggleMenu()">
           <span class="menu-icon"></span>
         </button>
@@ -26,9 +25,12 @@
           <li><a href="/about">About</a></li>
           <li><a href="/projects">Projects</a></li>
           <li><a href="/contact">Contact</a></li>
+          
+            <li><a href="/Register">Signup</a></li>
+            <li><a href="/Login">Login</a></li>
+          
+
         </ul>
-
-
 
         <button id="theme-toggle" aria-label="" class="toggle-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -37,8 +39,6 @@
             </path>
           </svg>
         </button>
-
-
       </div>
     </nav>
   </header>
@@ -46,6 +46,7 @@
   <main role="main" class="container">
     @RenderBody()
   </main>
+
   <footer>
     <div class="eye-container">
       <div class="eye">
@@ -66,6 +67,14 @@
       <a href="https://www.linkedin.com/in/c-r-0703242a9/" target="_blank"><img src="/img/ln.png"></a>
     </div>
   </footer>
+
+
+  @if (TempData["Message"] != null)
+  {
+    <script>
+      alert('@TempData["Message"]');
+    </script>
+  }
 
   <script src="~/js/site.js"></script>
 </body>

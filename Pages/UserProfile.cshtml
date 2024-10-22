@@ -1,0 +1,27 @@
+@page
+@model chayanonr.Pages.UserProfileModel
+@{
+    ViewData["Title"] = "User  Profile";
+}
+<body class="user-page" id="user=page">
+
+<div class="user-content">
+<h2>User Profile</h2>
+
+@if (Model.CurrentUser != null)
+{
+    <div>
+        <p><strong>Email:</strong> @Model.CurrentUser.Email</p>
+        <p><strong>Username:</strong> @Model.CurrentUser.UserName</p>
+    </div>
+    
+    <form method="post" asp-page-handler="Logout">
+        <button type="submit">Logout</button>
+    </form>
+}
+else
+{
+    <p>You are not logged in.</p>
+}
+</div>
+</body>
