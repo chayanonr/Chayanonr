@@ -26,6 +26,7 @@ body {
 body.active {
   opacity: 1;
 }
+
 /* Header styles */
 header {
   background-color: var(--nav-background);
@@ -464,7 +465,6 @@ footer {
   transform: scale(1.05);
   /* Subtle scale effect on hover */
 }
-
 
 /* About */
 .about-page {
@@ -1030,6 +1030,226 @@ p {
   color: var(--hover-color);
 }
 
+/*Login*/
+.login-page {
+  background-color: var(--background-color);
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: var(--text-color);
+
+  footer {
+    display: none;
+  }
+}
+
+/* General body styles */
+body.login-page {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Login form container */
+.login-form {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+/* Form elements */
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Error messages */
+.text-danger {
+  color: red;
+  font-size: 12px;
+}
+
+/* Submit button */
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+/*Signup*/
+.signup-page {
+  background-color: var(--background-color);
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: var(--text-color);
+
+  footer {
+    display: none;
+  }
+}
+/* General body styles */
+body.signup-page {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Signup form container */
+.signup-form {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+/* Form elements */
+.signup-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Error messages */
+.text-danger {
+  color: red;
+  font-size: 12px;
+}
+
+/* Submit button */
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+  background-color: #0056b3;
+}
+/*User*/
+
+.user-page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  left: 0;
+  background-color: var(--background-color);
+  transition: all 0.3s ease;
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-color);
+
+
+}
+
+/* General body styles */
+body.user-page {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* User profile container */
+.user-content {
+  background-color:var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+/* Heading */
+.user-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* User information */
+.user-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Logout button */
+.user-content form {
+  margin-top: 20px;
+}
+
+.user-content button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Message for not logged in */
+.user-content p:not(:last-child) {
+  font-style: italic;
+  color: #777;
+}
+
 /* Contact Section */
 .contact-page {
   background-color: var(--background-color);
@@ -1435,9 +1655,10 @@ p {
     height: 80vh;
   }
 
-  section#about{
+  section#about {
     height: 170vh;
   }
+
   .content {
     transform: none;
   }
@@ -1511,7 +1732,7 @@ p {
 
   /*Resume*/
 
-  .resume-page{
+  .resume-page {
     height: 130vh;
   }
 
@@ -1782,14 +2003,14 @@ p {
 
 }
 
-@media (max-width:391px){
-  .about-page{
+@media (max-width:391px) {
+  .about-page {
     height: 190vh;
   }
 }
 
-@media (max-width:431px){
-  
+@media (max-width:431px) {
+
 
   .menu-icon {
     transform: translateX(-350%);
@@ -1819,11 +2040,12 @@ p {
   }
 
   /*about*/
-  section#about{
+  section#about {
     height: 160vh;
   }
-  .about-page{
-    height:160vh;
+
+  .about-page {
+    height: 160vh;
   }
 
   .content {
@@ -1897,9 +2119,10 @@ p {
   }
 
   /*Resume*/
-  .resume-page{
+  .resume-page {
     height: 130vh;
   }
+
   .resume-content {
     margin-top: 15vh;
     margin-left: 0;

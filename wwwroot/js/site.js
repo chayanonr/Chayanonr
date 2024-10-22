@@ -59,6 +59,49 @@ document.addEventListener('mousemove', (event) => {
   });
 });
 
+//Login/signup
+document.addEventListener('DOMContentLoaded', function () {
+  var signupModal = document.getElementById("signupModal");
+  var loginModal = document.getElementById("loginModal");
+  var signupButton = document.getElementById("signupButton");
+  var loginButton = document.getElementById("loginButton");
+  var closeSignup = document.getElementById("closeSignup");
+  var closeLogin = document.getElementById("closeLogin");
+
+  // Open Signup Modal
+  signupButton.onclick = function () {
+      signupModal.style.display = "block";
+  }
+
+  // Open Login Modal
+  loginButton.onclick = function () {
+      loginModal.style.display = "block";
+  }
+
+  // Close Signup Modal
+  closeSignup.onclick = function () {
+      signupModal.style.display = "none";
+  }
+
+  // Close Login Modal
+  closeLogin.onclick = function () {
+      loginModal.style.display = "none";
+  }
+
+  // Close modals when clicking outside of the modal
+  window.onclick = function (event) {
+      if (event.target === signupModal) {
+          signupModal.style.display = "none";
+      }
+      if (event.target === loginModal) {
+          loginModal.style.display = "none";
+      }
+  }
+});
+
+
+
+
 
 // Projects
 

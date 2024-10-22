@@ -1,0 +1,30 @@
+@page
+@model chayanonr.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Contact | Chayanonr";
+}
+
+<body class="signup-page" id="signup-page">
+    <div class="signup-form">
+      <form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Input.Email" />
+        <span asp-validation-for="Input.Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Password</label>
+        <input asp-for="Input.Password" type="password" />
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Confirm Password</label>
+        <input asp-for="Input.ConfirmPassword" type="password" />
+        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+    </div>
+    <button type="submit">Register</button>
+</form>
+    </div>
+</body>
