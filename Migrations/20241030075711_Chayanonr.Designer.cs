@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace chayanonr.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241022023057_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241030075711_Chayanonr")]
+    partial class Chayanonr
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
